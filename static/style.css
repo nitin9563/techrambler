@@ -19,6 +19,8 @@
     justify-content: space-evenly;
 }
 
+
+/* Left side design start */
 .left{
     height: 90%;
     width: 30%;
@@ -36,6 +38,10 @@
     /* border: 2px solid red; */
 }
 
+
+/* left row 1 */
+
+
 .l-row-1{
     height: 10%;
     font-family: "Dancing Script", cursive;
@@ -48,6 +54,11 @@
     align-items: center;
     /* text-align: center; */
 }
+
+
+/* left row 2 */
+
+
 .l-row-2{
     height: 30%;
     display: flex;
@@ -69,11 +80,19 @@
 }
 
 
+/* left row 3 */
+
 .l-row-3{
     height: 25%;
     font-family: "Kode Mono", monospace;
     font-size: 1.3rem;
 }
+
+
+
+
+/* left row 4 */
+
 
 .l-row-4{
     height: 20%;
@@ -85,7 +104,7 @@
 }
 
 .l-row-4 .icons{
-    height: 85%;
+    height: 65%;
     width: 0%;
     border-bottom: 2px solid grey;
     display: flex;
@@ -110,6 +129,10 @@
     border: none;
 }
 
+
+
+/* left row 5 */
+
 .l-row-5{
     height: 10%;
     display: flex;
@@ -133,31 +156,104 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Right side design starts here */
 
 .right{
     height: 95vh;
     width: 65%;
-    background-color: rgb(46, 163, 16);
+    border: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* video boxes */
+
+.video_rows{
+    width: 90%;
+    height: 30%;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video_cols{
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    border-radius: 2rem;
+    position: relative;
+}
+
+.thumbnail{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image:url("/static/Thumbnail-dj-2.jpg") ;
+    background-color: black;
+    background-repeat:no-repeat ;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid wheat;
+    border-radius: 2rem;
+    opacity: 0.8;
+    filter: blur(9px);
+}
+
+.thumbnail>img{
+    height: 97%;
+    position: relative;
+}
+
+
+
+.info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    border-radius: 2rem;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ 
+.info .titel{
+    width: 80%;
+    height: 30%;
+    border: 1px solid pink;
+}
+
+.info a{
+    width: 40%;
+    height: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+.videos_container{
+
 }
