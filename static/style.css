@@ -110,6 +110,7 @@
     align-items: center;
     font-size: 1.2rem;
     font-family: "Roboto Mono", monospace;
+    border-radius: 0.2rem;
 
 }
 .content-info{
@@ -180,7 +181,7 @@
     height: 50%;
     /* border: 1px solid black; */
     display: flex;
-    justify-content: center;
+    justify-content: end;
 }
 
 .tb-r-u > img{
