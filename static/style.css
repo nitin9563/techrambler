@@ -180,7 +180,7 @@
     height: 50%;
     /* border: 1px solid black; */
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .tb-r-u > img{
