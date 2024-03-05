@@ -272,14 +272,33 @@
     text-decoration: none;
     color: black;
     margin-right:2%;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0 2%;
+    outline: none;
+
+}
+
+
+.nc-a option{
+    background-color: black;
+    color: white;
+}
+
+.nc-a option:nth-child(1){
+    color: black;
 }
 
 .nc-a-active{
     color: white;
     background-color: black;
-    border-radius: 0.2rem;
-    padding: 0 2%;
+
 }
+
+.nc-a-active:hover{
+    background-color: black;
+}
+
 
 
 
