@@ -226,4 +226,20 @@
 }
 
 
+.contain-below{
+    width: 100%;
+    height: 90vh;
+    border: 2px solid hotpink;
+}
 
+.nav-category{
+    width: 70%;
+    height: 10vh;
+    border: 2px solid blueviolet;
+}
+
+.all-posts{
+    width: 70%;
+    height: 70vh;
+    border: 3px solid khaki;
+}
