@@ -8,6 +8,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%;
+    max-width: 100%;
 }
 
 .container{
@@ -153,6 +155,8 @@
 .tb-left{
     height: 60%;
     width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 .tb-left>h1{
@@ -221,22 +225,66 @@
 }
 
 
+.icon-p{
+    height: 50%;
+}
+
 .icon-i{
+    height: 40%;
     display: none;
 }
 
 
+
+
+/* Below main content */
+
+
 .contain-below{
+    margin-top: 3%;
     width: 100%;
     height: 90vh;
     border: 2px solid hotpink;
+    /* background-color: black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+
+/* nav bar of category  */
+
 
 .nav-category{
     width: 70%;
     height: 10vh;
-    border: 2px solid blueviolet;
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    align-items: center;
 }
+
+.nc-a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    height: 40%;
+    text-decoration: none;
+    color: black;
+    margin-right:2%;
+}
+
+.nc-a-active{
+    color: white;
+    background-color: black;
+    border-radius: 0.2rem;
+    padding: 0 2%;
+}
+
+
+
+
+/* all posts  will be in this div */
 
 .all-posts{
     width: 70%;
