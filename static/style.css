@@ -320,7 +320,14 @@
 }
 
 .post_det{
-    width: 47%;
     height: 100%;
     border: 1px solid green;
+}
+
+.post_l{
+    width: 40%;
+}
+
+.post_r{
+    width: 57%;
 }
