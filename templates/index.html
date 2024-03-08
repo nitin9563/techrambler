@@ -62,30 +62,27 @@
 
 
         <div class="contain-below">
+
             <div class="nav-category">
-                <a href="" class="nc-a nc-a-active">All videos</a>
-                <a href="" class="nc-a">Playlist</a>
-                <a href="" class="nc-a">Category</a>
-
-                <select name="playlist" id="playlist-button" class="nc-a">
-                    <option>Playlist</option>
-                    <option value="Django">Django</option>
-                    <option value="WebDev">WebDev</option>
-                </select>
-
-                <select name="category" id="category-button" class="nc-a">
-                    <option>Category</option>
-                    <option value="Python">Python</option>
-                    <option value="Django">Django</option>
-                    <option value="WebDev">WebDev</option>
-                </select>
-
+                <a href="#" class="nc-a nc-a-active" onclick="toggleActive(1)">All videos</a>
+                <a href="#" class="nc-a" onclick="toggleActive(2)">Playlist</a>
+                <a href="#" class="nc-a" onclick="toggleActive(3)">Category</a>
             </div>
 
             <div class="all-posts">
-                
+                <div class="post_card">
+
+                    <div class="post_det post_l"></div>
+                    <div class="post_det post_r"></div>
+                    
+                </div>
+                <div class="post_card"></div>
             </div>
+
         </div>
     </div>
+
+
+    <script src="/static/script.js"></script>
 </body>
 </html>

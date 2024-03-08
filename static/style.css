@@ -243,8 +243,8 @@
 .contain-below{
     margin-top: 3%;
     width: 100%;
-    height: 90vh;
-    border: 2px solid hotpink;
+    height: 100%;
+    /* border: 2px solid hotpink; */
     /* background-color: black; */
     display: flex;
     flex-wrap: wrap;
@@ -279,14 +279,8 @@
 
 }
 
-
-.nc-a option{
-    background-color: black;
-    color: white;
-}
-
-.nc-a option:nth-child(1){
-    color: black;
+.nc-a:hover{
+    background-color: rgba(197, 197, 197, 0.57);
 }
 
 .nc-a-active{
@@ -307,6 +301,26 @@
 
 .all-posts{
     width: 70%;
-    height: 70vh;
-    border: 3px solid khaki;
+    height: 100%;
+    /* border: 3px solid khaki; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2vh;
+
+}
+
+
+.post_card{
+    width: 45%;
+    height: 30vh;
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post_det{
+    width: 47%;
+    height: 100%;
+    border: 1px solid green;
 }
