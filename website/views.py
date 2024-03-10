@@ -22,3 +22,8 @@ def dataadd(request):
         x.save()
         
     return HttpResponse("done check")
+
+
+def code(request,id):
+    a=Content.objects.get(id=id)
+    print(id)

@@ -317,7 +317,7 @@
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
-    background-color: #b8cce6;
+    background-color: #f7f7f8;
     border-radius: 0.4rem;
     transition: all  .3s ease-in-out;
 }
