@@ -18,7 +18,7 @@ class Content(models.Model):
     title=models.CharField(max_length=200,blank=False)
     description=models.TextField()
     date=models.DateField(default=date.today())
-    thumbnail=models.FileField()
+    thumbnail=models.FileField(upload_to="thumbnails/",default="" ,max_length=200)
     video_link=models.CharField(max_length=1000)
     playlist=models.ForeignKey(Playlist,on_delete=models.SET_NULL, null=True)
     category=models.ForeignKey(Category,on_delete=models.SET_NULL, null=True)

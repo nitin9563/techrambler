@@ -69,14 +69,31 @@
                 <a href="#" class="nc-a" onclick="toggleActive(3)">Category</a>
             </div>
 
+
+
             <div class="all-posts">
+
+                {% for post in video %}
+
                 <div class="post_card">
 
-                    <div class="post_det post_l"></div>
-                    <div class="post_det post_r"></div>
+                    <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
+                        <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
+                    </div>
+
+                    <div class="post_det post_r">
+
+                        <p class="post_date">{{post.date}}</p>
+                        <h2 class="post_title">{{post.title}}</h2>
+                        <p class="post_desc">{{post.description}}</p>
+                        <a href="#" class="post_link">Code</a>
+                        
+                    </div>
                     
                 </div>
-                <div class="post_card"></div>
+
+                {% endfor %}
+
             </div>
 
         </div>
