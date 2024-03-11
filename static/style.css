@@ -393,3 +393,31 @@ border-bottom-left-radius: 0.4rem;
 
 }
 
+
+
+/* code page styling  */
+
+.container-code{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: black; */
+}
+
+.right-code{
+    width: 60vw;
+    height: 100vh;
+    border: 3px solid hotpink;
+}
+
+.left-code{
+    width: 35vw;
+    height: 100vh;
+    border: 4px solid khaki;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+}

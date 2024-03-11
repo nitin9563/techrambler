@@ -25,5 +25,5 @@ def dataadd(request):
 
 
 def code(request,id):
-    a=Content.objects.get(id=id)
-    print(id)
+    code=Content.objects.get(id=id)
+    return render(request,"code.html",{"post":code})
