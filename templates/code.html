@@ -5,15 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{post.title}}</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
 </head>
 <body>
     <div class="container-code">
 
         <div class="left-code">
-            <iframe src="https://www.youtube.com/embed/j8eEMEu0eDs?autoplay=1" ></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/j8eEMEu0eDs?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+            <!-- <iframe src="https://www.youtube.com/embed/j8eEMEu0eDs?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+            <iframe src="https://www.youtube.com/embed/j8eEMEu0eDs?autoplay=1&loop=1&playlist=j8eEMEu0eDs&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
         </div>
 
         <div class="right-code">
+
+            <div class="heading-code">
+                <h1>{{post.title}}</h1>
+            </div>
+
+            <div class="code-code">
+                <pre><code class="language-python">
+                    def hello_world():
+                        print("Hello, world!")
+                </code></pre>
+            </div>
 
         </div>
 
