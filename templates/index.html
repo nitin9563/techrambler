@@ -8,6 +8,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
 </head>
 <body>
+
     <div class="container">
         <div class="contain-above">
             <div class="video">
@@ -71,7 +72,7 @@
 
 
 
-            <div class="all-posts">
+            <div class="all-posts all-posts-active" id = "all-videos">
 
                 {% for post in video %}
 
@@ -96,10 +97,59 @@
 
             </div>
 
+            <div class="all-posts" id ="all-playlists">
+
+                {% for play in playlist %}
+
+                <div class="post_card">
+
+                    <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
+                        <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
+                    </div>
+
+                    <div class="post_det post_r">
+                        <p class="post_date">{{post.date}}</p>
+                        <h2 class="post_title">{{play.playlist_name}}</h2>
+                        <p class="post_desc">Here you can access all the video of {{play.playlist_name}} playlist</p>
+                        <a href="code/{{post.id}}" class="post_link">All videos</a>
+                        
+                    </div>
+                    
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="all-posts" id = "all-category">
+
+                {% for cat in category %}
+
+                <div class="post_card">
+
+                    <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
+                        <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
+                    </div>
+
+                    <div class="post_det post_r">
+                        <p class="post_date">{{post.date}}</p>
+                        <h2 class="post_title">{{cat.category_name}}</h2>
+                        <p class="post_desc">Here you can access all videos of {{cat.category_name}} category</p>
+                        <a href="code/{{post.id}}" class="post_link">All videos</a>
+                        
+                    </div>
+                    
+                </div>
+
+                {% endfor %}
+
+            </div>
+
         </div>
     </div>
 
 
+    
     <script src="/static/script.js"></script>
 </body>
 </html>

@@ -309,6 +309,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2vh;
+    display: none;
 
 }
 
@@ -396,6 +397,13 @@ border-bottom-left-radius: 0.4rem;
 }
 
 
+.all-posts-active{
+    display: flex;
+}
+
+
+
+
 
 /* code page styling  */
 
@@ -412,11 +420,20 @@ border-bottom-left-radius: 0.4rem;
     width: 35vw;
     height: 99vh;
     border: 4px solid khaki;
+    position: relative;
 }
 
 iframe{
     height: 100%;
     width: 100%;
+}
+
+.yt{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    /* background-color: red;  */
 }
 .right-code{
     width: 60vw;
@@ -435,9 +452,9 @@ iframe{
 .heading-code>h1{
     color: white;
     font-family: "Alice", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
   /* text-transform: uppercase; */
 
 }
@@ -462,4 +479,3 @@ pre {
 code {
     color: #333; /* Darker text color for contrast */
 }
-  

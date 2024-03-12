@@ -5,8 +5,10 @@ from random import choice
 # Create your views here.
 def index(request):
     videos = Content.objects.all()
+    playlist = Playlist.objects.all()
+    category = Category.objects.all()
 
-    return render(request,"index.html",{"video":videos})
+    return render(request,"index.html",{"video":videos,"playlist":playlist,"category":category})
 
 def dataadd(request):
 
