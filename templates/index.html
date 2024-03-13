@@ -6,6 +6,7 @@
     <title>Tech Rambler</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <script src="/static/script.js"></script>
 </head>
 <body>
 
@@ -65,31 +66,77 @@
         <div class="contain-below">
 
             <div class="nav-category">
-                <a href="#" class="nc-a nc-a-active" onclick="toggleActive(1)">All videos</a>
-                <a href="#" class="nc-a" onclick="toggleActive(2)">Playlist</a>
-                <a href="#" class="nc-a" onclick="toggleActive(3)">Category</a>
+                <a href="/" class="nc-a  {%if data_role == "main" %} nc-a-active {%endif%}"
+                >All videos</a>
+                <a href="/?playlist=1" class="nc-a  {%if data_role == "play" %} nc-a-active {%endif%}">Playlist</a>
+                <a href="/?category=1" class="nc-a  {%if data_role == "cat" %} nc-a-active {%endif%}">Category</a>
+                {%if specific|length > 0%}
+                    
+                    <a class="nc-a">
+                        {{specific}}
+                    </a>
+
+                    <script>
+                        toggleActive(4);
+                    </script>
+
+                    
+                {%endif%}
             </div>
 
 
 
-            <div class="all-posts all-posts-active" id = "all-videos">
+            <div class="all-posts">
 
-                {% for post in video %}
+                {% for post in data %}
 
                 <div class="post_card">
+                    
 
-                    <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
-                        <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
-                    </div>
+                    {%if data_role == "main" %}
 
-                    <div class="post_det post_r">
+                        <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
+                            <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
+                        </div>
+                        <div class="post_det post_r">
 
-                        <p class="post_date">{{post.date}}</p>
-                        <h2 class="post_title">{{post.title}}</h2>
-                        <p class="post_desc">{{post.description}}</p>
-                        <a href="code/{{post.id}}" class="post_link">Code</a>
-                        
-                    </div>
+                            <p class="post_date">{{post.date}}</p>
+                            <h2 class="post_title">{{post.title}}</h2>
+                            <p class="post_desc">{{post.description}}...</p>
+                            <a href="code/{{post.id}}" class="post_link">Code</a>
+                            
+                        </div>
+
+                    {% elif  data_role == "play" %}
+                        <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
+                            <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
+                        </div>
+
+                        <div class="post_det post_r">
+                            <p class="post_date">{{post.date}}</p>
+                            <h2 class="post_title">Playlist name : {{post.playlist_name}}</h2>
+                            <p class="post_desc">Here you can access all the video of<b> {{post.playlist_name}} </b>playlist</p>
+                            <a href="/?playlist_name={{post.playlist_name}}" class="post_link">All videos</a>
+                            
+                        </div>
+
+
+                    {% elif  data_role == "cat" %}
+
+                        <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
+                            <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
+                        </div>
+
+                        <div class="post_det post_r">
+                            <p class="post_date">{{post.date}}</p>
+                            <h2 class="post_title">Category name : {{post.category_name}}</h2>
+                            <p class="post_desc">Here you can access all videos of <b>{{post.category_name}} </b>category</p>
+                            <a href="/?category_name={{post.category_name}}" class="post_link">All videos</a>
+                            
+                        </div>
+
+
+                    {%endif%}
                     
                 </div>
 
@@ -97,59 +144,20 @@
 
             </div>
 
-            <div class="all-posts" id ="all-playlists">
 
-                {% for play in playlist %}
 
-                <div class="post_card">
-
-                    <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
-                        <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
-                    </div>
-
-                    <div class="post_det post_r">
-                        <p class="post_date">{{post.date}}</p>
-                        <h2 class="post_title">{{play.playlist_name}}</h2>
-                        <p class="post_desc">Here you can access all the video of {{play.playlist_name}} playlist</p>
-                        <a href="code/{{post.id}}" class="post_link">All videos</a>
-                        
-                    </div>
-                    
-                </div>
-
-                {% endfor %}
-
-            </div>
-
-            <div class="all-posts" id = "all-category">
-
-                {% for cat in category %}
-
-                <div class="post_card">
-
-                    <div class="post_det post_l" data-img="/static/Thumbnail-dj-2.jpg">
-                        <img src="/static/Thumbnail-dj-2.jpg" alt="thumbnail">
-                    </div>
-
-                    <div class="post_det post_r">
-                        <p class="post_date">{{post.date}}</p>
-                        <h2 class="post_title">{{cat.category_name}}</h2>
-                        <p class="post_desc">Here you can access all videos of {{cat.category_name}} category</p>
-                        <a href="code/{{post.id}}" class="post_link">All videos</a>
-                        
-                    </div>
-                    
-                </div>
-
-                {% endfor %}
-
-            </div>
 
         </div>
+
+
+        <div class="upfooter">
+        </div>
+    
     </div>
 
 
+
     
-    <script src="/static/script.js"></script>
+    {% comment %} <script src="/static/script.js"></script> {% endcomment %}
 </body>
 </html>
