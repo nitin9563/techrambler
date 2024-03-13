@@ -70,16 +70,12 @@
                 >All videos</a>
                 <a href="/?playlist=1" class="nc-a  {%if data_role == "play" %} nc-a-active {%endif%}">Playlist</a>
                 <a href="/?category=1" class="nc-a  {%if data_role == "cat" %} nc-a-active {%endif%}">Category</a>
+
                 {%if specific|length > 0%}
                     
-                    <a class="nc-a">
+                    <a class="nc-a nc-a-active">
                         {{specific}}
                     </a>
-
-                    <script>
-                        toggleActive(4);
-                    </script>
-
                     
                 {%endif%}
             </div>
